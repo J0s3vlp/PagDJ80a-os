@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>80 Años de Armando López Atencio • DJ Request</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Playfair Display (Elegancia de Gala) & Plus Jakarta Sans (Lectura limpia) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            gala: {
+              ivory: '#FAF7F2',
+              beige: '#F3ECE1',
+              sand: '#E8DEC8',
+              gold: '#C5A059',
+              goldBright: '#D4AF37',
+              goldDark: '#9E7B36',
+              silver: '#A8A9AD',
+              silverLight: '#E2E4E8',
+              charcoal: '#18181B',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #FAF7F2;
+      color: #18181B;
+      background-image: 
+        radial-gradient(circle at 12% 10%, rgba(212, 175, 55, 0.14) 0%, transparent 42%),
+        radial-gradient(circle at 88% 85%, rgba(168, 169, 173, 0.16) 0%, transparent 45%),
+        linear-gradient(180deg, #FAF7F2 0%, #F3ECE1 100%);
+      background-attachment: fixed;
+    }
+
+    /* Degradados metálicos dorado y plateado */
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #9E7B36 0%, #D4AF37 50%, #B38B3F 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .gold-metallic-border {
+      border-image: linear-gradient(135deg, #D4AF37, #E2E4E8, #C5A059) 1;
+    }
+
+    .btn-charcoal-gold {
+      background-color: #18181B;
+      color: #FAF7F2;
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      box-shadow: 0 10px 25px -5px rgba(24, 24, 27, 0.22), 0 4px 10px -2px rgba(197, 160, 89, 0.15);
+      transition: all 0.25s ease;
+    }
+    .btn-charcoal-gold:hover {
+      background-color: #27272A;
+      border-color: #D4AF37;
+      box-shadow: 0 14px 28px -5px rgba(24, 24, 27, 0.28), 0 6px 14px -2px rgba(212, 175, 55, 0.28);
+      transform: translateY(-1px);
+    }
+    .btn-charcoal-gold:active {
+      transform: scale(0.985);
+    }
+
+    .btn-gold-metallic {
+      background: linear-gradient(135deg, #C5A059 0%, #DFBE6F 50%, #B58E43 100%);
+      color: #18181B;
+      box-shadow: 0 8px 20px -4px rgba(197, 160, 89, 0.35);
+      transition: all 0.25s ease;
+    }
+    .btn-gold-metallic:hover {
+      filter: brightness(1.04);
+      box-shadow: 0 12px 24px -4px rgba(197, 160, 89, 0.48);
+      transform: translateY(-1px);
+    }
+    .btn-gold-metallic:active {
+      transform: scale(0.985);
+    }
+
+    .gala-card {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(197, 160, 89, 0.32);
+      box-shadow: 0 12px 32px -8px rgba(158, 123, 54, 0.09), 0 2px 6px rgba(24, 24, 27, 0.03);
+    }
+
+    /* Animaciones suaves */
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-slide-in {
+      animation: slideIn 0.35s ease forwards;
+    }
+
+    @keyframes pulseEqualizer {
+      0%, 100% { height: 6px; }
+      50% { height: 16px; }
+    }
+    .eq-bar {
+      width: 3px;
+      background: linear-gradient(to top, #9E7B36, #D4AF37);
+      border-radius: 2px;
+      animation: pulseEqualizer 0.9s infinite ease-in-out;
+    }
+    .eq-bar:nth-child(2) { animation-delay: 0.25s; }
+    .eq-bar:nth-child(3) { animation-delay: 0.45s; }
+
+    /* Scrollbar elegante */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F3ECE1;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #C5A059;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #9E7B36;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-gala-gold/25 selection:text-gala-charcoal">
+
+  <!-- Toast / Notificación flotante -->
+  <div id="toast" class="fixed top-5 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 transition-all duration-300 transform -translate-y-4">
+    <div class="bg-gala-charcoal border border-gala-gold/50 text-gala-ivory px-4 py-3 rounded-2xl shadow-2xl flex items-center gap-3">
+      <i id="toast-icon" class="fa-solid fa-circle-check text-gala-goldBright text-lg"></i>
+      <span id="toast-msg" class="text-sm font-medium">Mensaje</span>
+    </div>
+  </div>
+
+  <!-- Barra Superior Discreta y Elegante -->
+  <header class="w-full border-b border-gala-gold/25 bg-white/80 backdrop-blur-md sticky top-0 z-40">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between gap-2">
+      <!-- Identidad pequeña de barra -->
+      <div class="flex items-center gap-2.5 min-w-0">
+        <div class="w-9 h-9 rounded-full bg-gala-charcoal border border-gala-gold flex items-center justify-center shrink-0 shadow-sm">
+          <span class="font-serif font-bold text-xs text-gala-goldBright tracking-tight">80</span>
+        </div>
+        <div class="truncate">
+          <p class="font-serif font-bold text-sm sm:text-base text-gala-charcoal truncate leading-tight">
+            Armando López Atencio
+          </p>
+          <p class="text-[11px] text-zinc-500 flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-gala-goldBright animate-pulse"></span>
+            Pide tu Canción • DJ Set
+          </p>
+        </div>
+      </div>
+
+      <!-- Botón Discreto Cambio de Modo (Invitado / Modo DJ) -->
+      <div class="flex items-center shrink-0">
+        <button id="btn-toggle-mode" onclick="handleModeSwitch()" class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-gala-beige/90 hover:bg-gala-sand/70 text-gala-charcoal border border-gala-gold/35 transition-all flex items-center gap-1.5 cursor-pointer">
+          <i id="mode-icon" class="fa-solid fa-sliders text-gala-goldDark"></i>
+          <span id="mode-text">Modo DJ</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <main class="flex-1 w-full max-w-4xl mx-auto px-4 py-6 sm:py-8 space-y-6">
+
+    <!-- ========================================================= -->
+    <!-- BANNER CONMEMORATIVO DE GALA (80 AÑOS)                    -->
+    <!-- ========================================================= -->
+    <div class="max-w-md mx-auto bg-gala-charcoal text-gala-ivory rounded-3xl p-6 sm:p-7 relative overflow-hidden shadow-xl border border-gala-gold/40 text-center">
+      <!-- Destellos sutiles dorado y plateado -->
+      <div class="absolute -top-12 -left-12 w-36 h-36 rounded-full bg-gala-gold/15 blur-2xl pointer-events-none"></div>
+      <div class="absolute -bottom-12 -right-12 w-36 h-36 rounded-full bg-gala-silver/15 blur-2xl pointer-events-none"></div>
+      
+      <!-- Marco interior fino -->
+      <div class="border border-gala-gold/30 rounded-2xl p-4 sm:p-5 relative z-10">
+        <!-- Emblema 80 Años -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-gala-gold/50 mb-3">
+          <i class="fa-solid fa-crown text-[10px] text-gala-goldBright"></i>
+          <span class="font-serif font-bold text-xs tracking-[0.22em] text-gala-goldBright uppercase">80 Años</span>
+          <i class="fa-solid fa-crown text-[10px] text-gala-goldBright"></i>
+        </div>
+
+        <h1 class="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-white leading-snug">
+          Armando López Atencio
+        </h1>
+
+        <div class="flex items-center justify-center gap-3 my-2.5">
+          <span class="h-px w-10 bg-gradient-to-r from-transparent to-gala-gold/70"></span>
+          <i class="fa-solid fa-champagne-glasses text-xs text-gala-silverLight"></i>
+          <span class="h-px w-10 bg-gradient-to-l from-transparent to-gala-gold/70"></span>
+        </div>
+
+        <p class="text-xs sm:text-sm text-gala-silverLight font-medium tracking-wide">
+          Pide tu Canción • DJ Set
+        </p>
+      </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 1. VISTA INVITADO (Predeterminada)         -->
+    <!-- ========================================== -->
+    <section id="guest-view" class="max-w-md mx-auto space-y-5 animate-slide-in">
+      
+      <!-- BOTÓN DESTACADO: ÁLBUM DE FOTOS DE LOS 80 AÑOS -->
+      <div class="gala-card rounded-3xl p-4 sm:p-5 relative overflow-hidden">
+        <div class="flex items-center justify-between gap-3">
+          <div class="flex items-center gap-3 min-w-0">
+            <div class="w-11 h-11 rounded-2xl bg-gala-beige border border-gala-gold/40 flex items-center justify-center text-gala-goldDark shrink-0">
+              <i class="fa-solid fa-camera-retro text-lg"></i>
+            </div>
+            <div class="min-w-0">
+              <h2 class="font-serif font-bold text-base text-gala-charcoal leading-tight">
+                Recuerdos de la Gala
+              </h2>
+              <p class="text-xs text-zinc-600 truncate mt-0.5">
+                Comparte tus fotos y videos de la fiesta
+              </p>
+            </div>
+          </div>
+
+          <a id="shared-album-link" href="https://photos.app.goo.gl/cTDq5pZZzGh6c1CF7" target="_blank" rel="noopener noreferrer"
+            class="px-4 py-2.5 rounded-2xl btn-gold-metallic font-bold text-xs sm:text-sm flex items-center gap-2 shrink-0 cursor-pointer">
+            <span>Álbum de Fotos</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- TARJETA DEL FORMULARIO DE PEDIDOS -->
+      <div class="gala-card rounded-3xl p-6 sm:p-7 relative overflow-hidden">
+        <!-- Filete superior metálico dorado/plateado -->
+        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gala-silver via-gala-goldBright to-gala-silver"></div>
+
+        <div class="mb-5">
+          <span class="text-[11px] font-bold uppercase tracking-[0.16em] text-gala-goldDark">Selección Musical</span>
+          <h2 class="font-serif text-2xl font-bold text-gala-charcoal mt-0.5">¿Qué canción quieres bailar?</h2>
+          <p class="text-xs sm:text-sm text-zinc-600 mt-1">Anótala aquí y llegará directamente a la cabina del DJ.</p>
+        </div>
+
+        <!-- Formulario -->
+        <form id="request-form" onsubmit="submitSongRequest(event)" class="space-y-4">
+          <!-- Campo 1: Tu Nombre -->
+          <div>
+            <label for="guest-name" class="block text-xs font-bold uppercase tracking-wider text-zinc-700 mb-1.5">
+              Tu nombre <span class="text-gala-goldDark">*</span>
+            </label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gala-goldDark">
+                <i class="fa-regular fa-user"></i>
+              </div>
+              <input type="text" id="guest-name" required maxlength="40" placeholder="Ej: Familia Gómez, Carlos..."
+                class="w-full pl-10 pr-4 py-3.5 bg-gala-ivory/90 border border-gala-silverLight rounded-2xl text-gala-charcoal placeholder-zinc-400 focus:outline-none focus:border-gala-gold focus:ring-2 focus:ring-gala-gold/20 transition-all text-base">
+            </div>
+          </div>
+
+          <!-- Campo 2: Nombre de la Canción -->
+          <div>
+            <label for="song-title" class="block text-xs font-bold uppercase tracking-wider text-zinc-700 mb-1.5">
+              Nombre de la canción <span class="text-gala-goldDark">*</span>
+            </label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gala-goldDark">
+                <i class="fa-solid fa-music"></i>
+              </div>
+              <input type="text" id="song-title" required maxlength="60" placeholder="Ej: La Gota Fría, A Mi Manera..."
+                class="w-full pl-10 pr-4 py-3.5 bg-gala-ivory/90 border border-gala-silverLight rounded-2xl text-gala-charcoal placeholder-zinc-400 focus:outline-none focus:border-gala-gold focus:ring-2 focus:ring-gala-gold/20 transition-all text-base">
+            </div>
+          </div>
+
+          <!-- Campo 3: Cantante / Artista -->
+          <div>
+            <label for="song-artist" class="block text-xs font-bold uppercase tracking-wider text-zinc-700 mb-1.5">
+              Cantante / Artista <span class="text-gala-goldDark">*</span>
+            </label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gala-goldDark">
+                <i class="fa-solid fa-microphone-lines"></i>
+              </div>
+              <input type="text" id="song-artist" required maxlength="50" placeholder="Ej: Carlos Vives, Julio Iglesias..."
+                class="w-full pl-10 pr-4 py-3.5 bg-gala-ivory/90 border border-gala-silverLight rounded-2xl text-gala-charcoal placeholder-zinc-400 focus:outline-none focus:border-gala-gold focus:ring-2 focus:ring-gala-gold/20 transition-all text-base">
+            </div>
+          </div>
+
+          <!-- Botón Principal de Envío (Acento Negro Carbón + Dorado) -->
+          <div class="pt-2">
+            <button type="submit" id="btn-submit"
+              class="w-full py-4 px-6 rounded-2xl btn-charcoal-gold font-bold text-base tracking-wide flex items-center justify-center gap-2.5 cursor-pointer">
+              <i class="fa-solid fa-paper-plane text-gala-goldBright"></i>
+              <span>Enviar Pedido al DJ</span>
+            </button>
+          </div>
+        </form>
+
+        <!-- Estado de Confirmación tras enviar (Oculto inicialmente) -->
+        <div id="confirmation-box" class="hidden text-center py-6 space-y-4 animate-slide-in">
+          <div class="w-16 h-16 rounded-full bg-gala-beige border-2 border-gala-gold text-gala-goldDark flex items-center justify-center mx-auto text-2xl shadow-md">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <div>
+            <h3 class="font-serif text-xl font-bold text-gala-charcoal">¡Solicitud recibida!</h3>
+            <p id="confirmed-song-summary" class="text-sm text-zinc-600 mt-1">Tu canción ya está en la lista de la fiesta.</p>
+          </div>
+          <div class="pt-2">
+            <button type="button" onclick="resetGuestForm()"
+              class="w-full py-3.5 px-5 rounded-2xl bg-gala-beige hover:bg-gala-sand/80 text-gala-charcoal font-bold text-sm border border-gala-gold/40 transition-all flex items-center justify-center gap-2 cursor-pointer">
+              <i class="fa-solid fa-plus text-gala-goldDark"></i>
+              <span>Pedir otra canción</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- LISTA PÚBLICA EN VIVO: PEDIDOS RECIENTES -->
+      <div class="gala-card rounded-3xl p-5 sm:p-6">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-2.5">
+            <div class="flex items-end gap-0.5 h-4">
+              <div class="eq-bar"></div>
+              <div class="eq-bar"></div>
+              <div class="eq-bar"></div>
+            </div>
+            <h3 class="font-serif font-bold text-base sm:text-lg text-gala-charcoal">Pedidos recientes en vivo</h3>
+          </div>
+          <span id="guest-queue-count" class="text-xs font-bold px-3 py-1 rounded-full bg-gala-charcoal text-gala-goldBright border border-gala-gold/40">
+            0 en cola
+          </span>
+        </div>
+
+        <div id="guest-queue-list" class="space-y-2.5 max-h-80 overflow-y-auto pr-1">
+          <!-- Se llena dinámicamente -->
+          <div class="text-center py-8 text-zinc-500 text-sm">
+            <i class="fa-solid fa-compact-disc fa-spin text-2xl mb-2 text-gala-gold"></i>
+            <p>Sincronizando lista musical...</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 2. VISTA DJ (Panel en Vivo Protegido)      -->
+    <!-- ========================================== -->
+    <section id="dj-view" class="hidden space-y-5 animate-slide-in">
+      
+      <!-- Cabecera del Panel DJ y Estadísticas -->
+      <div class="gala-card rounded-3xl p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider bg-gala-charcoal text-gala-goldBright border border-gala-gold/40">
+              Cabina DJ • 80 Años
+            </span>
+            <span class="text-xs text-zinc-500 font-medium">En vivo</span>
+          </div>
+          <h2 class="font-serif text-2xl font-bold text-gala-charcoal mt-1">Gestión de Pedidos Musicales</h2>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2.5">
+          <!-- Contadores -->
+          <div class="flex items-center gap-3.5 bg-gala-ivory border border-gala-gold/35 px-4 py-2 rounded-2xl">
+            <div class="text-center">
+              <span id="dj-pending-count" class="block font-serif font-bold text-xl text-gala-charcoal leading-none">0</span>
+              <span class="text-[10px] uppercase text-zinc-500 font-bold tracking-wider">Pendientes</span>
+            </div>
+            <div class="w-px h-7 bg-gala-silverLight"></div>
+            <div class="text-center">
+              <span id="dj-played-count" class="block font-serif font-bold text-xl text-gala-goldDark leading-none">0</span>
+              <span class="text-[10px] uppercase text-zinc-500 font-bold tracking-wider">Ya sonaron</span>
+            </div>
+          </div>
+
+          <!-- Botón Limpiar Lista -->
+          <button onclick="openClearModal()" class="px-4 py-2.5 rounded-2xl bg-red-50 hover:bg-red-100 text-red-700 border border-red-200 text-xs sm:text-sm font-bold transition-all flex items-center gap-2 cursor-pointer">
+            <i class="fa-solid fa-trash-can"></i>
+            <span>Limpiar todo</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Configuración en vivo del Enlace del Álbum Compartido -->
+      <div class="gala-card rounded-3xl p-5 sm:p-6">
+        <div class="flex items-start sm:items-center gap-3 mb-3">
+          <div class="w-10 h-10 rounded-xl bg-gala-charcoal text-gala-goldBright flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-images"></i>
+          </div>
+          <div>
+            <h3 class="font-serif font-bold text-base sm:text-lg text-gala-charcoal">Enlace del Álbum Compartido (Google Photos)</h3>
+            <p class="text-xs text-zinc-600">Pega aquí el link de tu álbum colaborativo y guárdalo para habilitar el botón a todos los invitados.</p>
+          </div>
+        </div>
+
+        <form onsubmit="saveAlbumUrl(event)" class="flex flex-col sm:flex-row gap-2.5 mt-3">
+          <input type="url" id="dj-album-url-input" value="https://photos.app.goo.gl/cTDq5pZZzGh6c1CF7" placeholder="https://photos.app.goo.gl/..."
+            class="flex-1 px-4 py-3 bg-gala-ivory border border-gala-silverLight rounded-2xl text-sm text-gala-charcoal placeholder-zinc-400 focus:outline-none focus:border-gala-gold focus:ring-2 focus:ring-gala-gold/20">
+          <button type="submit" id="btn-save-album"
+            class="px-5 py-3 rounded-2xl btn-charcoal-gold text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shrink-0 cursor-pointer">
+            <i class="fa-solid fa-floppy-disk text-gala-goldBright"></i>
+            <span>Guardar Enlace</span>
+          </button>
+        </form>
+        <p id="album-status-label" class="text-xs text-zinc-500 mt-2 flex items-center gap-1.5">
+          <i class="fa-solid fa-circle-check text-emerald-600"></i>
+          <span class="text-emerald-700 font-medium">Álbum activo y visible para todos los invitados</span>
+        </p>
+      </div>
+
+      <!-- Filtros rápidos para el DJ -->
+      <div class="flex items-center gap-2">
+        <button onclick="setDjFilter('all')" id="filter-all" class="px-4 py-2 rounded-xl text-xs font-bold bg-gala-charcoal text-gala-goldBright border border-gala-gold/40 transition-all cursor-pointer shadow-sm">
+          Todos
+        </button>
+        <button onclick="setDjFilter('pending')" id="filter-pending" class="px-4 py-2 rounded-xl text-xs font-bold bg-white/80 text-zinc-600 border border-gala-silverLight hover:text-gala-charcoal transition-all cursor-pointer">
+          Pendientes
+        </button>
+        <button onclick="setDjFilter('played')" id="filter-played" class="px-4 py-2 rounded-xl text-xs font-bold bg-white/80 text-zinc-600 border border-gala-silverLight hover:text-gala-charcoal transition-all cursor-pointer">
+          Ya sonaron
+        </button>
+      </div>
+
+      <!-- Lista de Pedidos del DJ -->
+      <div id="dj-requests-list" class="space-y-3">
+        <!-- Se llena dinámicamente -->
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Pie de página conmemorativo -->
+  <footer class="w-full py-5 text-center text-xs text-zinc-500 border-t border-gala-gold/20 mt-8">
+    <p class="font-serif italic text-zinc-600">Celebrando los 80 Años de Armando López Atencio</p>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- MODAL PIN DE ACCESO DJ                     -->
+  <!-- ========================================== -->
+  <div id="pin-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-gala-charcoal/60 backdrop-blur-sm p-4">
+    <div class="bg-gala-ivory border border-gala-gold/50 rounded-3xl max-w-sm w-full p-6 shadow-2xl animate-slide-in">
+      <div class="flex justify-between items-start mb-4">
+        <div class="w-12 h-12 rounded-2xl bg-gala-charcoal border border-gala-gold text-gala-goldBright flex items-center justify-center text-xl">
+          <i class="fa-solid fa-lock"></i>
+        </div>
+        <button onclick="closePinModal()" class="text-zinc-400 hover:text-gala-charcoal p-2 cursor-pointer">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <h3 class="font-serif text-xl font-bold text-gala-charcoal">Acceso Cabina DJ</h3>
+      <p class="text-sm text-zinc-600 mt-1">Ingresa el PIN de seguridad para gestionar las canciones y el álbum.</p>
+
+      <form onsubmit="verifyPin(event)" class="mt-5 space-y-4">
+        <div>
+          <input type="password" id="pin-input" inputmode="numeric" maxlength="6" placeholder="••••" required
+            class="w-full text-center tracking-[0.5em] font-serif text-2xl py-3.5 bg-white border border-gala-gold/40 rounded-2xl text-gala-charcoal focus:outline-none focus:border-gala-gold focus:ring-2 focus:ring-gala-gold/20 transition-all">
+          <p id="pin-error" class="text-red-600 text-xs font-medium mt-2 hidden text-center">PIN incorrecto. Verifica e intenta de nuevo.</p>
+        </div>
+
+        <div class="flex gap-2.5">
+          <button type="button" onclick="closePinModal()" class="flex-1 py-3 rounded-xl bg-gala-beige hover:bg-gala-sand text-zinc-700 text-sm font-bold transition-all cursor-pointer">
+            Cancelar
+          </button>
+          <button type="submit" class="flex-1 py-3 rounded-xl btn-charcoal-gold text-sm font-bold transition-all cursor-pointer">
+            Entrar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- MODAL AVISO ÁLBUM NO CONFIGURADO           -->
+  <!-- ========================================== -->
+  <div id="album-notice-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-gala-charcoal/60 backdrop-blur-sm p-4">
+    <div class="bg-gala-ivory border border-gala-gold/50 rounded-3xl max-w-sm w-full p-6 shadow-2xl animate-slide-in text-center">
+      <div class="w-14 h-14 rounded-2xl bg-gala-beige border border-gala-gold/50 text-gala-goldDark flex items-center justify-center text-2xl mx-auto mb-4">
+        <i class="fa-solid fa-camera-retro"></i>
+      </div>
+      <h3 class="font-serif text-xl font-bold text-gala-charcoal">Álbum de los 80 Años</h3>
+      <p class="text-sm text-zinc-600 mt-2 leading-relaxed">
+        El enlace del álbum compartido aún se está preparando. ¡Vuelve a intentarlo en unos minutos para subir tus fotos de la celebración!
+      </p>
+      <button onclick="closeAlbumNoticeModal()" class="w-full mt-6 py-3 rounded-2xl btn-charcoal-gold text-sm font-bold cursor-pointer">
+        Entendido
+      </button>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- MODAL CONFIRMAR LIMPIAR LISTA (Sin confirm) -->
+  <!-- ========================================== -->
+  <div id="clear-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-gala-charcoal/60 backdrop-blur-sm p-4">
+    <div class="bg-gala-ivory border border-gala-gold/50 rounded-3xl max-w-sm w-full p-6 shadow-2xl animate-slide-in">
+      <div class="w-12 h-12 rounded-2xl bg-red-100 border border-red-200 text-red-600 flex items-center justify-center text-xl mb-4">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+      </div>
+      <h3 class="font-serif text-xl font-bold text-gala-charcoal">¿Vaciar toda la lista?</h3>
+      <p class="text-sm text-zinc-600 mt-1">Se eliminarán todos los pedidos musicales actuales. Esta acción no se puede deshacer.</p>
+      
+      <div class="flex gap-2.5 mt-6">
+        <button onclick="closeClearModal()" class="flex-1 py-3 rounded-xl bg-gala-beige hover:bg-gala-sand text-zinc-700 text-sm font-bold transition-all cursor-pointer">
+          Cancelar
+        </button>
+        <button onclick="confirmClearAll()" class="flex-1 py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white text-sm font-bold transition-all cursor-pointer">
+          Sí, limpiar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- LÓGICA DE LA APLICACIÓN Y FIREBASE         -->
+  <!-- ========================================== -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+    import { getFirestore, collection, addDoc, updateDoc, deleteDoc, setDoc, doc, onSnapshot, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+    // Variables globales de estado
+    const DJ_PIN = "0011";
+    const DEFAULT_ALBUM_URL = "https://photos.app.goo.gl/cTDq5pZZzGh6c1CF7";
+    let isDjAuthenticated = false;
+    let currentView = "guest"; // 'guest' | 'dj'
+    let djFilter = "all"; // 'all' | 'pending' | 'played'
+    let allRequests = [];
+    let sharedAlbumUrl = DEFAULT_ALBUM_URL;
+
+    // Configuración Firebase (Entorno + Respaldo Local / Config propia)
+    const customFirebaseConfig = {
+      apiKey: "AIzaSyBsTQyzhcrIVbxDJ2r-S9ixS3B-Cnfq6j0",
+      authDomain: "dj80anosarmandolopez.firebaseapp.com",
+      projectId: "dj80anosarmandolopez",
+      storageBucket: "dj80anosarmandolopez.firebasestorage.app",
+      messagingSenderId: "7434368191",
+      appId: "1:7434368191:web:12cc1f7943812bdf1f53e2",
+      measurementId: "G-V2GGPCZMQV"
+    };
+    const appId = typeof __app_id !== "undefined" ? __app_id : "armando-80-anos";
+    const rawFirebaseConfig = customFirebaseConfig || (typeof __firebase_config !== "undefined" ? JSON.parse(__firebase_config) : null);
+
+    let db = null;
+    let auth = null;
+    let currentUser = null;
+    let useLocalFallback = false;
+
+    const LOCAL_STORAGE_KEY = `dj_requests_${appId}`;
+    const LOCAL_ALBUM_KEY = `dj_album_url_${appId}`;
+
+    // ==========================================
+    // UTILIDADES UI Y NOTIFICACIONES
+    // ==========================================
+    function showToast(message, type = "success") {
+      const toast = document.getElementById("toast");
+      const icon = document.getElementById("toast-icon");
+      const msg = document.getElementById("toast-msg");
+
+      msg.textContent = message;
+      if (type === "error") {
+        icon.className = "fa-solid fa-circle-exclamation text-red-400 text-lg";
+      } else if (type === "info") {
+        icon.className = "fa-solid fa-circle-info text-gala-goldBright text-lg";
+      } else {
+        icon.className = "fa-solid fa-circle-check text-gala-goldBright text-lg";
+      }
+
+      toast.classList.remove("opacity-0", "-translate-y-4", "pointer-events-none");
+      toast.classList.add("opacity-100", "translate-y-0");
+
+      clearTimeout(window.toastTimeout);
+      window.toastTimeout = setTimeout(() => {
+        toast.classList.remove("opacity-100", "translate-y-0");
+        toast.classList.add("opacity-0", "-translate-y-4", "pointer-events-none");
+      }, 3000);
+    }
+
+    function escapeHtml(str) {
+      if (!str) return "";
+      const div = document.createElement("div");
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    function formatTime(timestamp) {
+      if (!timestamp) return "Ahora";
+      let date;
+      if (timestamp.toDate) {
+        date = timestamp.toDate();
+      } else if (typeof timestamp === "number") {
+        date = new Date(timestamp);
+      } else {
+        return "Ahora";
+      }
+      return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+    }
+
+    // ==========================================
+    // GESTIÓN DEL ÁLBUM DE FOTOS COMPARTIDO
+    // ==========================================
+    function updateAlbumUi() {
+      const inputEl = document.getElementById("dj-album-url-input");
+      const statusEl = document.getElementById("album-status-label");
+      const albumLinkEl = document.getElementById("shared-album-link");
+      const activeUrl = sharedAlbumUrl || DEFAULT_ALBUM_URL;
+
+      if (albumLinkEl) {
+        albumLinkEl.href = activeUrl;
+      }
+      if (inputEl && document.activeElement !== inputEl) {
+        inputEl.value = activeUrl;
+      }
+      if (statusEl) {
+        statusEl.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-600"></i> <span class="text-emerald-700 font-medium">Álbum activo y visible para todos los invitados</span>`;
+      }
+    }
+
+    function closeAlbumNoticeModal() {
+      const modal = document.getElementById("album-notice-modal");
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+
+    async function saveAlbumUrl(event) {
+      event.preventDefault();
+      const inputEl = document.getElementById("dj-album-url-input");
+      const btn = document.getElementById("btn-save-album");
+      const url = inputEl.value.trim();
+
+      if (!url) {
+        showToast("Ingresa un enlace válido de Google Photos", "error");
+        return;
+      }
+
+      btn.disabled = true;
+      try {
+        if (!useLocalFallback && db) {
+          const settingsRef = doc(db, "artifacts", appId, "public", "data", "party_settings", "album");
+          await setDoc(settingsRef, {
+            url: url,
+            updatedAt: serverTimestamp()
+          });
+        } else {
+          sharedAlbumUrl = url;
+          localStorage.setItem(LOCAL_ALBUM_KEY, url);
+          updateAlbumUi();
+        }
+        showToast("Enlace del álbum guardado en vivo");
+      } catch (error) {
+        console.error("Error guardando enlace del álbum:", error);
+        showToast("Error al guardar el enlace", "error");
+      } finally {
+        btn.disabled = false;
+      }
+    }
+
+    // ==========================================
+    // NAVEGACIÓN Y AUTENTICACIÓN DJ (PIN 0011)
+    // ==========================================
+    function handleModeSwitch() {
+      if (currentView === "guest") {
+        if (isDjAuthenticated) {
+          switchView("dj");
+        } else {
+          openPinModal();
+        }
+      } else {
+        switchView("guest");
+      }
+    }
+
+    function switchView(view) {
+      currentView = view;
+      const guestView = document.getElementById("guest-view");
+      const djView = document.getElementById("dj-view");
+      const modeText = document.getElementById("mode-text");
+      const modeIcon = document.getElementById("mode-icon");
+
+      if (view === "dj") {
+        guestView.classList.add("hidden");
+        djView.classList.remove("hidden");
+        modeText.textContent = "Vista Invitado";
+        modeIcon.className = "fa-solid fa-user text-gala-goldDark";
+        renderDjList();
+      } else {
+        djView.classList.add("hidden");
+        guestView.classList.remove("hidden");
+        modeText.textContent = "Modo DJ";
+        modeIcon.className = "fa-solid fa-sliders text-gala-goldDark";
+        renderGuestList();
+      }
+    }
+
+    function openPinModal() {
+      const modal = document.getElementById("pin-modal");
+      const input = document.getElementById("pin-input");
+      const error = document.getElementById("pin-error");
+      input.value = "";
+      error.classList.add("hidden");
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      setTimeout(() => input.focus(), 100);
+    }
+
+    function closePinModal() {
+      const modal = document.getElementById("pin-modal");
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+
+    function verifyPin(event) {
+      event.preventDefault();
+      const input = document.getElementById("pin-input").value.trim();
+      const error = document.getElementById("pin-error");
+
+      if (input === DJ_PIN) {
+        isDjAuthenticated = true;
+        closePinModal();
+        switchView("dj");
+        showToast("Acceso concedido • Cabina DJ");
+      } else {
+        error.classList.remove("hidden");
+        document.getElementById("pin-input").value = "";
+        document.getElementById("pin-input").focus();
+      }
+    }
+
+    // ==========================================
+    // ENVÍO DE PEDIDOS MUSICALES (INVITADOS)
+    // ==========================================
+    async function submitSongRequest(event) {
+      event.preventDefault();
+      const nameInput = document.getElementById("guest-name");
+      const songInput = document.getElementById("song-title");
+      const artistInput = document.getElementById("song-artist");
+      const submitBtn = document.getElementById("btn-submit");
+
+      const guestName = nameInput.value.trim();
+      const songTitle = songInput.value.trim();
+      const songArtist = artistInput.value.trim();
+
+      if (!guestName || !songTitle || !songArtist) {
+        showToast("Por favor completa los tres campos", "error");
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin text-gala-goldBright"></i> <span>Enviando solicitud...</span>`;
+
+      try {
+        if (!useLocalFallback && db) {
+          const requestsRef = collection(db, "artifacts", appId, "public", "data", "song_requests");
+          await addDoc(requestsRef, {
+            guestName,
+            songTitle,
+            songArtist,
+            status: "pending",
+            createdAt: serverTimestamp(),
+            clientTime: Date.now()
+          });
+        } else {
+          const newReq = {
+            id: "local_" + Date.now(),
+            guestName,
+            songTitle,
+            songArtist,
+            status: "pending",
+            createdAt: Date.now(),
+            clientTime: Date.now()
+          };
+          allRequests.unshift(newReq);
+          saveLocalRequests();
+          renderAll();
+        }
+
+        document.getElementById("request-form").classList.add("hidden");
+        document.getElementById("confirmed-song-summary").innerHTML =
+          `Pediste <strong class="text-gala-charcoal">"${escapeHtml(songTitle)}"</strong> de <strong class="text-gala-goldDark">${escapeHtml(songArtist)}</strong>.`;
+        document.getElementById("confirmation-box").classList.remove("hidden");
+
+        songInput.value = "";
+        artistInput.value = "";
+        showToast("¡Canción enviada a la cabina del DJ!");
+      } catch (error) {
+        console.error("Error al enviar pedido:", error);
+        showToast("No se pudo enviar el pedido. Intenta de nuevo.", "error");
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = `<i class="fa-solid fa-paper-plane text-gala-goldBright"></i> <span>Enviar Pedido al DJ</span>`;
+      }
+    }
+
+    function resetGuestForm() {
+      document.getElementById("confirmation-box").classList.add("hidden");
+      document.getElementById("request-form").classList.remove("hidden");
+      document.getElementById("song-title").focus();
+    }
+
+    // ==========================================
+    // ACCIONES DEL PANEL DJ
+    // ==========================================
+    function setDjFilter(filter) {
+      djFilter = filter;
+      ["all", "pending", "played"].forEach((f) => {
+        const btn = document.getElementById(`filter-${f}`);
+        if (f === filter) {
+          btn.className = "px-4 py-2 rounded-xl text-xs font-bold bg-gala-charcoal text-gala-goldBright border border-gala-gold/40 transition-all cursor-pointer shadow-sm";
+        } else {
+          btn.className = "px-4 py-2 rounded-xl text-xs font-bold bg-white/80 text-zinc-600 border border-gala-silverLight hover:text-gala-charcoal transition-all cursor-pointer";
+        }
+      });
+      renderDjList();
+    }
+
+    async function toggleSongStatus(id, currentStatus) {
+      const nextStatus = currentStatus === "played" ? "pending" : "played";
+      try {
+        if (!useLocalFallback && db) {
+          const docRef = doc(db, "artifacts", appId, "public", "data", "song_requests", id);
+          await updateDoc(docRef, { status: nextStatus });
+        } else {
+          const item = allRequests.find((r) => r.id === id);
+          if (item) item.status = nextStatus;
+          saveLocalRequests();
+          renderAll();
+        }
+        showToast(nextStatus === "played" ? "Marcada como Ya sonó" : "Devuelta a Pendientes", "info");
+      } catch (error) {
+        console.error("Error actualizando estado:", error);
+        showToast("Error al actualizar el estado", "error");
+      }
+    }
+
+    async function deleteSongRequest(id) {
+      try {
+        if (!useLocalFallback && db) {
+          const docRef = doc(db, "artifacts", appId, "public", "data", "song_requests", id);
+          await deleteDoc(docRef);
+        } else {
+          allRequests = allRequests.filter((r) => r.id !== id);
+          saveLocalRequests();
+          renderAll();
+        }
+        showToast("Pedido eliminado", "info");
+      } catch (error) {
+        console.error("Error eliminando pedido:", error);
+        showToast("Error al eliminar", "error");
+      }
+    }
+
+    function copySongInfo(songTitle, songArtist) {
+      const textToCopy = `${songTitle} - ${songArtist}`;
+      const tempInput = document.createElement("textarea");
+      tempInput.value = textToCopy;
+      tempInput.style.position = "fixed";
+      tempInput.style.opacity = "0";
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      try {
+        document.execCommand("copy");
+        showToast(`Copiado: "${textToCopy}"`);
+      } catch (err) {
+        showToast("No se pudo copiar al portapapeles", "error");
+      }
+      document.body.removeChild(tempInput);
+    }
+
+    function openClearModal() {
+      if (allRequests.length === 0) {
+        showToast("La lista ya está vacía", "info");
+        return;
+      }
+      const modal = document.getElementById("clear-modal");
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    }
+
+    function closeClearModal() {
+      const modal = document.getElementById("clear-modal");
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+
+    async function confirmClearAll() {
+      closeClearModal();
+      try {
+        if (!useLocalFallback && db) {
+          const deletePromises = allRequests.map((req) =>
+            deleteDoc(doc(db, "artifacts", appId, "public", "data", "song_requests", req.id))
+          );
+          await Promise.all(deletePromises);
+        } else {
+          allRequests = [];
+          saveLocalRequests();
+          renderAll();
+        }
+        showToast("Lista limpiada por completo");
+      } catch (error) {
+        console.error("Error limpiando lista:", error);
+        showToast("Error al limpiar la lista", "error");
+      }
+    }
+
+    // ==========================================
+    // RENDERIZADO DE LISTAS (INVITADO Y DJ)
+    // ==========================================
+    function renderAll() {
+      renderGuestList();
+      renderDjList();
+    }
+
+    function renderGuestList() {
+      const container = document.getElementById("guest-queue-list");
+      const countBadge = document.getElementById("guest-queue-count");
+
+      const pendingCount = allRequests.filter((r) => r.status !== "played").length;
+      countBadge.textContent = `${pendingCount} en cola`;
+
+      if (allRequests.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-8 px-4 rounded-2xl bg-gala-ivory/70 border border-dashed border-gala-gold/35">
+            <i class="fa-solid fa-music text-2xl text-gala-gold mb-2"></i>
+            <p class="text-sm font-medium text-zinc-700">Aún no hay canciones pedidas</p>
+            <p class="text-xs text-zinc-500 mt-0.5">¡Sé el primero en dedicarle un tema a Armando!</p>
+          </div>
+        `;
+        return;
+      }
+
+      const recentRequests = [...allRequests].slice(0, 15);
+      container.innerHTML = recentRequests
+        .map((req) => {
+          const isPlayed = req.status === "played";
+          return `
+            <div class="flex items-center justify-between gap-3 p-3.5 rounded-2xl border transition-all ${
+              isPlayed
+                ? "bg-gala-beige/40 border-gala-silverLight/70 opacity-65"
+                : "bg-white border-gala-gold/25 shadow-xs"
+            }">
+              <div class="min-w-0 flex-1">
+                <div class="flex items-center gap-2">
+                  <p class="font-bold text-sm text-gala-charcoal truncate ${isPlayed ? "line-through text-zinc-500" : ""}">
+                    ${escapeHtml(req.songTitle)}
+                  </p>
+                  ${
+                    isPlayed
+                      ? `<span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-gala-gold/15 text-gala-goldDark border border-gala-gold/30">Ya sonó</span>`
+                      : ""
+                  }
+                </div>
+                <p class="text-xs text-zinc-600 truncate mt-0.5">
+                  <span class="font-medium text-gala-goldDark">${escapeHtml(req.songArtist)}</span> • Pedida por <span class="font-semibold text-zinc-800">${escapeHtml(req.guestName)}</span>
+                </p>
+              </div>
+              <div class="shrink-0 text-right">
+                <span class="text-[11px] font-medium text-zinc-400">${formatTime(req.createdAt || req.clientTime)}</span>
+              </div>
+            </div>
+          `;
+        })
+        .join("");
+    }
+
+    function renderDjList() {
+      const container = document.getElementById("dj-requests-list");
+      const pendingEl = document.getElementById("dj-pending-count");
+      const playedEl = document.getElementById("dj-played-count");
+
+      const pendingTotal = allRequests.filter((r) => r.status !== "played").length;
+      const playedTotal = allRequests.filter((r) => r.status === "played").length;
+
+      pendingEl.textContent = pendingTotal;
+      playedEl.textContent = playedTotal;
+
+      let filtered = [...allRequests];
+      if (djFilter === "pending") {
+        filtered = filtered.filter((r) => r.status !== "played");
+      } else if (djFilter === "played") {
+        filtered = filtered.filter((r) => r.status === "played");
+      }
+
+      // Ordenar: pendientes más antiguos primero (orden de llegada)
+      filtered.sort((a, b) => {
+        if (a.status !== b.status) {
+          return a.status === "played" ? 1 : -1;
+        }
+        const timeA = a.clientTime || (a.createdAt?.toMillis ? a.createdAt.toMillis() : 0);
+        const timeB = b.clientTime || (b.createdAt?.toMillis ? b.createdAt.toMillis() : 0);
+        return timeA - timeB;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="gala-card rounded-3xl p-10 text-center">
+            <div class="w-14 h-14 rounded-2xl bg-gala-beige border border-gala-gold/35 text-gala-goldDark flex items-center justify-center mx-auto mb-3 text-xl">
+              <i class="fa-solid fa-headphones"></i>
+            </div>
+            <h3 class="font-serif font-bold text-gala-charcoal text-lg">Sin pedidos en esta vista</h3>
+            <p class="text-sm text-zinc-500 mt-1">Los pedidos de los invitados aparecerán aquí en tiempo real.</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered
+        .map((req, index) => {
+          const isPlayed = req.status === "played";
+          const safeTitle = escapeHtml(req.songTitle).replace(/'/g, "\\'");
+          const safeArtist = escapeHtml(req.songArtist).replace(/'/g, "\\'");
+
+          return `
+            <div class="gala-card rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-all ${
+              isPlayed ? "opacity-65 bg-gala-beige/50" : "border-l-4 border-l-gala-goldBright"
+            }">
+              <!-- Info Canción -->
+              <div class="flex items-start gap-3.5 min-w-0">
+                <div class="w-9 h-9 rounded-xl flex items-center justify-center font-serif font-bold text-sm shrink-0 ${
+                  isPlayed
+                    ? "bg-gala-silverLight/60 text-zinc-500"
+                    : "bg-gala-charcoal text-gala-goldBright border border-gala-gold/40"
+                }">
+                  ${isPlayed ? '<i class="fa-solid fa-check"></i>' : `#${index + 1}`}
+                </div>
+
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <h4 class="font-serif font-bold text-base sm:text-lg text-gala-charcoal leading-tight ${isPlayed ? "line-through text-zinc-500" : ""}">
+                      ${escapeHtml(req.songTitle)}
+                    </h4>
+                    <span class="text-xs px-2.5 py-0.5 rounded-full bg-gala-beige text-gala-charcoal border border-gala-gold/30 font-semibold">
+                      ${escapeHtml(req.songArtist)}
+                    </span>
+                  </div>
+
+                  <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-zinc-500 mt-1.5">
+                    <span><i class="fa-regular fa-user text-gala-goldDark mr-1"></i>Pedido por: <strong class="text-zinc-800">${escapeHtml(req.guestName)}</strong></span>
+                    <span>•</span>
+                    <span><i class="fa-regular fa-clock mr-1"></i>${formatTime(req.createdAt || req.clientTime)}</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Acciones DJ -->
+              <div class="flex items-center gap-2 shrink-0 self-end sm:self-center">
+                <!-- Copiar título y artista -->
+                <button onclick="copySongInfo('${safeTitle}', '${safeArtist}')" title="Copiar canción y artista"
+                  class="px-3 py-2 rounded-xl bg-gala-ivory hover:bg-gala-beige text-gala-charcoal border border-gala-gold/35 text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer">
+                  <i class="fa-regular fa-copy text-gala-goldDark"></i>
+                  <span>Copiar</span>
+                </button>
+
+                <!-- Marcar como Ya Sonó -->
+                <button onclick="toggleSongStatus('${req.id}', '${req.status || "pending"}')"
+                  class="px-3.5 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
+                    isPlayed
+                      ? "bg-white hover:bg-gala-beige text-zinc-600 border border-gala-silverLight"
+                      : "btn-charcoal-gold"
+                  }">
+                  <i class="fa-solid ${isPlayed ? "fa-rotate-left" : "fa-circle-check text-gala-goldBright"}"></i>
+                  <span>${isPlayed ? "Desmarcar" : "Ya sonó"}</span>
+                </button>
+
+                <!-- Eliminar -->
+                <button onclick="deleteSongRequest('${req.id}')" title="Eliminar pedido"
+                  class="p-2 rounded-xl bg-red-50 hover:bg-red-100 text-red-600 border border-red-200 transition-all cursor-pointer">
+                  <i class="fa-solid fa-trash-can text-xs"></i>
+                </button>
+              </div>
+            </div>
+          `;
+        })
+        .join("");
+    }
+
+    // ==========================================
+    // PERSISTENCIA LOCAL DE RESPALDO
+    // ==========================================
+    function loadLocalData() {
+      try {
+        const saved = localStorage.getItem(LOCAL_STORAGE_KEY);
+        allRequests = saved ? JSON.parse(saved) : [];
+      } catch (e) {
+        allRequests = [];
+      }
+      try {
+        sharedAlbumUrl = localStorage.getItem(LOCAL_ALBUM_KEY) || DEFAULT_ALBUM_URL;
+      } catch (e) {
+        sharedAlbumUrl = DEFAULT_ALBUM_URL;
+      }
+      updateAlbumUi();
+      renderAll();
+    }
+
+    function saveLocalRequests() {
+      try {
+        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(allRequests));
+      } catch (e) {
+        console.warn("No se pudo guardar en almacenamiento local:", e);
+      }
+    }
+
+    // ==========================================
+    // INICIALIZACIÓN FIREBASE EN TIEMPO REAL
+    // ==========================================
+    async function initApp() {
+      updateAlbumUi();
+
+      if (!rawFirebaseConfig) {
+        useLocalFallback = true;
+        loadLocalData();
+        return;
+      }
+
+      try {
+        const app = initializeApp(rawFirebaseConfig);
+        db = getFirestore(app);
+
+        // Conectar directo a Firestore en tiempo real
+        subscribeToRequests();
+        subscribeToAlbumSettings();
+
+        // Intentar auth anónimo en segundo plano si está disponible
+        try {
+          auth = getAuth(app);
+          if (typeof __initial_auth_token !== "undefined" && __initial_auth_token) {
+            await signInWithCustomToken(auth, __initial_auth_token);
+          } else {
+            await signInAnonymously(auth);
+          }
+          onAuthStateChanged(auth, (user) => {
+            currentUser = user;
+          });
+        } catch (authErr) {
+          console.info("Conectado a Firestore en modo público directo.");
+        }
+      } catch (error) {
+        console.warn("Usando almacenamiento local de respaldo:", error);
+        useLocalFallback = true;
+        loadLocalData();
+      }
+    }
+
+    function subscribeToRequests() {
+      if (!db) return;
+      const requestsRef = collection(db, "artifacts", appId, "public", "data", "song_requests");
+
+      onSnapshot(
+        requestsRef,
+        (snapshot) => {
+          const items = [];
+          snapshot.forEach((docSnap) => {
+            items.push({
+              id: docSnap.id,
+              ...docSnap.data()
+            });
+          });
+
+          items.sort((a, b) => {
+            const timeA = a.clientTime || (a.createdAt?.toMillis ? a.createdAt.toMillis() : 0);
+            const timeB = b.clientTime || (b.createdAt?.toMillis ? b.createdAt.toMillis() : 0);
+            return timeB - timeA;
+          });
+
+          allRequests = items;
+          renderAll();
+        },
+        (error) => {
+          console.error("Error en suscripción Firestore:", error);
+          useLocalFallback = true;
+          loadLocalData();
+        }
+      );
+    }
+
+    function subscribeToAlbumSettings() {
+      if (!db) return;
+      const settingsRef = doc(db, "artifacts", appId, "public", "data", "party_settings", "album");
+
+      onSnapshot(
+        settingsRef,
+        (docSnap) => {
+          if (docSnap.exists() && docSnap.data().url) {
+            sharedAlbumUrl = docSnap.data().url;
+          } else {
+            sharedAlbumUrl = DEFAULT_ALBUM_URL;
+          }
+          updateAlbumUi();
+        },
+        (error) => {
+          console.warn("Error leyendo enlace del álbum:", error);
+          sharedAlbumUrl = DEFAULT_ALBUM_URL;
+          updateAlbumUi();
+        }
+      );
+    }
+
+    // Exponer funciones al ámbito global window para los eventos inline del HTML
+    window.handleModeSwitch = handleModeSwitch;
+    window.openPinModal = openPinModal;
+    window.closePinModal = closePinModal;
+    window.verifyPin = verifyPin;
+    window.submitSongRequest = submitSongRequest;
+    window.resetGuestForm = resetGuestForm;
+    window.setDjFilter = setDjFilter;
+    window.toggleSongStatus = toggleSongStatus;
+    window.deleteSongRequest = deleteSongRequest;
+    window.copySongInfo = copySongInfo;
+    window.openClearModal = openClearModal;
+    window.closeClearModal = closeClearModal;
+    window.confirmClearAll = confirmClearAll;
+    window.saveAlbumUrl = saveAlbumUrl;
+    window.closeAlbumNoticeModal = closeAlbumNoticeModal;
+
+    // Arrancar la aplicación
+    window.addEventListener("DOMContentLoaded", initApp);
+  </script>
+</body>
+</html>
